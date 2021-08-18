@@ -1,7 +1,7 @@
 ﻿CLONAR EL REPOSITORIO
 ----------------------------------------------
 
-git clone <ruta>
+git clone https://github.com/gcoronelc/UC-2021-20-19582.git
 
 
 
