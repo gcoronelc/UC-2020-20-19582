@@ -1,0 +1,22 @@
+﻿CLONAR EL REPOSITORIO
+----------------------------------------------
+
+git clone <ruta>
+
+
+
+ACTUALIZAR EL REPOSITORIO
+----------------------------------------------
+
+git pull
+
+
+
+DESCARTAR MODIFICACIONES
+(borrar tus cambios)
+----------------------------------------------
+
+git checkout .
+
+
+
