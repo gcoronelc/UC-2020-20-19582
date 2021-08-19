@@ -1,0 +1,25 @@
+Algoritmo para encontrar el área de un rectangulo.
+
+Lazaro Carpio
+-----------------------------------
+1.- Leer los números
+2.- Calcular el producto
+3.- Imprimir el producto
+
+Katherine Tacuri
+---------------------------------------------
+Rectangulo Algoritmo
+1.- Definir arrea ,base ,altura 
+2.- Ingresar base y altura
+3.- base altura
+4.- area , base altura
+5.- El calculo del area del rectangulo es area
+6.- sale el algoritmo 
+
+Solución mas acertada
+--------------------------------
+1.- Leer base 
+2.- Leer altura 
+3.- Calcular área 
+4.- Imprimir área
+
