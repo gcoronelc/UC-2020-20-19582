@@ -4,8 +4,7 @@
 Ejercicio 1:
 ------------------------------------
 Desarrollar un programa que permite 
-obtener el tipo de cambio de soles
-a dolares.
+obtener el cambio de soles a dolares.
 
 
 Ejercicio 2:
