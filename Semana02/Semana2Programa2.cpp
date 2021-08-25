@@ -11,10 +11,10 @@ int main( )
 	// Variables
 	int numero1, numero2;
 	int Suma, Resta, Multiplica;
-	double Division, RaizCuad, CuboPrimer; 
+	double Division, RaizCuad, CuboPrimer, Division2; 
 	
 	// Lectura de Datos
-	cout << "LECTURA DE DATOS" << endl;
+	cout << "\"LECTURA DE DATOS\"" << endl;
 	cout << "============================================" << endl;
 	cout << "Ingrese valor de primer número:\t\t";  cin >> numero1;
 	cout << "Ingrese valor de segundo número:\t"; cin >> numero2;
@@ -24,6 +24,7 @@ int main( )
 	Resta = numero1 - numero2;
 	Multiplica = numero1 * numero2;
 	Division = numero1 / numero2;
+	Division2 = numero1 * 1.0 / numero2;
 	RaizCuad = sqrt(Suma);
 	CuboPrimer = pow(numero1,3);
 	
@@ -35,6 +36,7 @@ int main( )
 	cout << "La resta es:\t\t\t\t" << Resta << "\n";
 	cout << "La multiplciaicón es:\t\t\t" << Multiplica << "\n";
 	cout << "La divisón es:\t\t\t\t" << Division << "\n";
+	cout << "La divisón 2 es:\t\t\t" << Division2 << "\n";
 	cout << "La raiz cuadrada de la suma es:\t\t" << RaizCuad << "\n";
 	cout << "El cubo del primer numero es:\t\t" << CuboPrimer << "\n";
 	
