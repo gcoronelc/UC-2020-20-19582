@@ -8,7 +8,7 @@ int main( )
 	setlocale(LC_CTYPE,"Spanish");
 	
 	// Variables
-	float base, altura, Area;
+	float base, altura, area;
 	
 	// Lectura de Datos
 	cout << "LECTURA DE DATOS" << endl;
@@ -17,13 +17,13 @@ int main( )
 	cout << "Ingrese valor de la altura:\t"; cin >> altura;
 	
 	// Proceso	
-	Area = (base * altura) / 2;
+	area = (base * altura) / 2;
 	
 	// Reporte
 	cout << endl;
 	cout << "LECTURA DE DATOS" << endl;
 	cout << "==========================================" << endl;	
-	cout << "El área del triángulo es:\t" << Area << endl;
+	cout << "El área del triángulo es:\t" << area << endl;
 	cout << endl;
 	
 	// Fin
