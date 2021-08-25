@@ -26,10 +26,13 @@ int main( )
 	
 	// Reporte
 	
-	cout<<"------------- REPORTE: --------------" <<"\n\n";
-	cout<<"El monto bruto es:\t\t\t\t" << MontoBruto << "\n";
-	cout<<"El monto de descuento es:\t\t\t" << MontoDescuento << "\n";
-	cout<<"El monto total es:\t\t\t\t" << MontoTotal << "\n";
+	cout << endl;
+	cout << "--------------------- REPORTE ----------------------" << "\n";
+	cout << "====================================================" << "\n";
+	cout << "El monto bruto es:\t\t\t\t" << MontoBruto << "\n";
+	cout << "El monto de descuento es:\t\t\t" << MontoDescuento << "\n";
+	cout << "El monto total es:\t\t\t\t" << MontoTotal << "\n";
+	cout << endl;
 	
 	return 0;
 }

@@ -39,6 +39,7 @@ int main( )
 	cout << "La divisón 2 es:\t\t\t" << Division2 << "\n";
 	cout << "La raiz cuadrada de la suma es:\t\t" << RaizCuad << "\n";
 	cout << "El cubo del primer numero es:\t\t" << CuboPrimer << "\n";
+	cout << endl;
 	
 	// Fin
 	system("pause");
