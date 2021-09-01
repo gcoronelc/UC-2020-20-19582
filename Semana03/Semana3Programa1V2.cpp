@@ -9,17 +9,17 @@ int main( )
 	
 	// Variables
 	int a, b, c;
-	stringstream reporte;
+	stringstream reporte; // Buffer
 	
 	// Lectura de datos
 	cout<<"Ingrese valor de primer número:\t\t"; cin>>a;
 	cout<<"Ingrese valor de segundo número:\t";  cin>>b;
 
 	// Proceso
-	reporte << "Los valores ingresados no cumplen la condición";
+	reporte << "Los valores ingresados no cumplen la condición."; // Mensaje por defecto
 	if( a>0 && b>0){
 		c = a + b;
-		reporte.str("");
+		reporte.str(""); // Limpio el buffer
 		reporte << "La suma es:\t\t\t\t" << c;
 	}
 	

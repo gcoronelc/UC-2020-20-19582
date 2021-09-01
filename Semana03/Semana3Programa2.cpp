@@ -1,3 +1,6 @@
+/*
+ * Sumar dos números enteros si son positivos (mayor a cero) sino multiplicarlos.
+*/
 #include<iostream>
 using namespace std;
 
@@ -20,10 +23,10 @@ int main( )
 		c = a + b;
 		cout<<"La suma es:\t\t\t\t" << c << "\n";
 	}
-	else
+	else // Cuando la condición es false
 	{
 		c = a * b;
-		cout<<"La multiplicación es:\t\t\t\t" << c << "\n";
+		cout<<"La multiplicación es:\t\t\t" << c << "\n";
 	}
 	
 	// Fin
