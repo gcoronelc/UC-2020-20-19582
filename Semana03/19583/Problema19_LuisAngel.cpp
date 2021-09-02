@@ -1,4 +1,4 @@
-// LUIS ANGEL CONDORI RAMON12:09
+// LUIS ANGEL CONDORI RAMON 12:09
 #include <iostream>
 using namespace std;
 
@@ -17,9 +17,9 @@ int main(){
 	// Proceso y Reporte
 	if( sueld>=0 && sueld<=1000)
 	{
-		cout<<"Descuento: 10% = "<<des<< endl;
 		des=sueld*0.1;
 		s_n=sueld-(des);
+		cout<<"Descuento: 10% = "<<des<< endl;
 		cout<<"Sueldo Neto:"<<s_n<< endl;
 	}
 	else if( sueld>1000 && sueld<=2000)
