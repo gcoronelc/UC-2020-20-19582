@@ -12,10 +12,15 @@ int main( )
 	cin  >> num;
 	// Proceso
 	f = 1;
+	/*
 	for( i=1 ; i<=num ; i++ )
 	{
 		f = f * i;
 	}
+	*/
+	for( i=1 ; i<=num ; f*=i++ );
+	
+	
 	// Reporte
 	cout << endl;
 	cout<<"El factorial de "<< num << " es: " << f; 
