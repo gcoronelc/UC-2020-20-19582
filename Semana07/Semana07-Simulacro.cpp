@@ -8,9 +8,9 @@ int main(){
 	
 	// Variables
 	int opMenu, cantidad;
-	double precio, porcComision;
+	double precio, porcComision, importeVenta, importeComision;
 	char categoria;
-	int contVentas=0;
+	int contVentas=0, contCateA=0, contCateB=0, contCateC=0;
 	
 	// Control del menú de opciones
 	do{
@@ -70,34 +70,62 @@ int main(){
 				switch(categoria){
 					case 'A':
 						precio = 55.00;
-						comision = (cantidad>10)?0.06:0.04;
+						porcComision = (cantidad>10)?0.06:0.04;
 						break;
 					case 'B':
 						precio = 75.00;
-						comision = (cantidad>10)?0.10:0.06;
+						porcComision = (cantidad>10)?0.10:0.06;
 						break;
 					case 'C':
 						precio = 93.00;
-						comision = (cantidad>10)?0.15:0.10;
+						porcComision = (cantidad>10)?0.15:0.10;
 						break;												
 				}
 				
-				 				
+				// Calculos
+				importeVenta = precio * cantidad;
+				importeComision = importeVenta * porcComision;
 				
-				cout << "Proceso opción 1" << endl;
+				// Contadores
+				contCateA = (cantidad>10)?6:4;
+				
+				
+				// Reporte de venta
+				cout << endl;
+				cout << fixed;
+				cout << " SOBRE RUEDAS SAC" << endl;
+				cout << " Reporte de venta " << contVentas << endl;
+				cout << "=====================================" << endl;
+				cout << "Precio por camioneta: " << precio << endl;
+				cout << "Importe de venta: " << importeVenta << endl;
+				cout << "Porc. de Comisión: " << porcComision << endl;
+				cout << "Importe de Comisión: " << importeComision << endl;
+
 				break;
 			
 			case 2: // Opción 2: bbbbb
 				cout << "Proceso opción 2" << endl;
 				break;	
 			
-			case 3: // Opción 3: cccccccc
-				cout << "Proceso opción 3" << endl;
+			// Opción 3: Reporte
+			case 3: 
+				cout << endl;
+				cout << fixed;
+				cout << " SOBRE RUEDAS SAC" << endl;
+				cout << " Resumen de ventas " << contVentas << endl;
+				cout << "=====================================" << endl;
+				cout << endl;
+				cout << "--------------------------------------------------------------------------" << endl;
+				cout << "    A" << "\t" << contCateA << endl;
+				cout << "    B" << "\t" << contCateB << endl;
+				cout << "    B" << "\t" << contCateC << endl;
+				cout << "--------------------------------------------------------------------------" << endl;
+				cout << "TOTALES:\t" << contVentas << endl;
 				break;					
 			
 			
 			case 4: // Opción 5: Salir
-				cout << "Fin del programa." << endl;
+				cout << "Proceso opción 4" << endl;
 				break;
 				
 		} // Fin switch
