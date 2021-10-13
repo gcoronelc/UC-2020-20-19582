@@ -15,6 +15,7 @@ int main(){
 	setlocale(LC_CTYPE,"Spanish");
 	
 	cout << "7 + 5 = " << sumar(7,5) << endl;
+	cout << "17 + 15 = " << sumar(17,15) << endl;
 	
 	// Fin
 	system("pause");
