@@ -1,5 +1,5 @@
 /*
-Fase 1: Estructura del programa
+Fase 1: Estructura del programa.
 */
 #include <iostream>
 using namespace std;
