@@ -24,13 +24,10 @@ int main(){
 	
 	// Configuracion
 	setlocale(LC_CTYPE,"Spanish");
-	
 	// Variables
 	char rpta;
-	
 	// Cabecera
 	mostrarCabecera();
-	
 	// Control principal
 	inicializaVariables();
 	do{
@@ -39,10 +36,8 @@ int main(){
 		// Existe otra persona para procesar?		
 		rpta = leeDatoSiNo("¿Procesa otra persona (S/N)?","Error en el dato ingresado.");
 	} while(rpta=='S');
-	
 	// Reporte final
 	mostrarReporteFinal();
-	
 	// Fin
 	system("pause");
 	return 0;
@@ -93,7 +88,15 @@ double calcularIMC(int pesoKg, int tallaCm){
 }
 
 string determinarEstado( double imc ){
-	return "Todo chevere";
+	string estado;
+	estado = "IMC raro"; // Valor inicial
+	estado = (imc>=40.0)?"Obesidad mórbida":estado;
+	estado = (imc>=35.0 && imc<40.0)?"Obesidad medio":estado;
+	estado = (imc>=30.0 && imc<35.0)?"Obesidad leve":estado;
+	estado = (imc>=25.0 && imc<30.0)?"Sobre peso":estado;
+	estado = (imc>=18.50 && imc<25.0)?"Peso normal":estado;
+	estado = (imc>=0 && imc<28.50)?"Infra peso":estado;
+	return estado;
 }
 
 // Lee un numero entero según el rango
