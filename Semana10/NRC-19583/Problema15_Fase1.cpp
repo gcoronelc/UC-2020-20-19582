@@ -1,3 +1,7 @@
+/*
+Fase 1: Arquitectura del programa
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -9,6 +13,7 @@ void mostrarCabecera();
 void inicializaVariables();
 char leeDatoSiNo(string etiqueta, string mensaje);
 void mostrarReporteFinal();
+void procPersona();
 
 int main(){
 	
@@ -24,18 +29,14 @@ int main(){
 	// Control principal
 	inicializaVariables();
 	do{
-		
-		contPersonas++;
-		cout << "Persona " << contPersonas  << endl;
-		cout << endl;
-		
-		
+		// Procesar persona
+		procPersona();
+		// Existe otra persona para procesar?		
 		rpta = leeDatoSiNo("¿Procesa otra persona (S/N)?","Error en el dato ingresado.");
 	} while(rpta=='S');
 	
 	// Reporte final
 	mostrarReporteFinal();
-	
 	
 	// Fin
 	system("pause");
@@ -45,6 +46,13 @@ int main(){
 // Inicializa variables globales
 void inicializaVariables(){
 	contPersonas = 0;
+}
+
+// Procesar una persona
+void procPersona(){
+	contPersonas++;
+	cout << "Persona " << contPersonas << endl;
+	cout << endl;
 }
 
 // Muestra el reporte final
