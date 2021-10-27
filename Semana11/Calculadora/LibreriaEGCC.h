@@ -6,7 +6,7 @@ using namespace std;
 int leerOpcion(int opMin, int opMax){
 	int opcion;
 	do{
-		cout << "\nOpcion: "; cin >> opcion;
+		cout << "Opcion: "; cin >> opcion;
 		if(opcion < opMin || opcion > opMax){
 			cout << "Opcion incorrecta." << endl;
 		}

@@ -70,8 +70,8 @@ void procesoMultiplicar(){
 
 }
 
-int main(int argc, char** argv) {
-		// Variables
+int main() {
+	// Variables
 	int opcion;
 	// Proceso principal
 	do{
