@@ -11,6 +11,8 @@ int main(){
 	int op;
 	
 	// Lectura de datos
+	cout << "MENU DEL DÍA" << endl;
+	cout << "============================" << endl;
 	cout << "1. Chicharrones" << endl;
 	cout << "2. Escabeche" << endl;
 	cout << "3. Caldo de gallina" << endl;
