@@ -14,3 +14,35 @@ void procMostrarMenu(){
 	cout << "----------------------------------" << endl;
 	cout << endl;
 }
+
+char leeCategoria(){
+	char categoria;
+	do{
+		cout << "Categoria (S/C/D/E): ";
+		cin  >> categoria;
+		categoria = toupper(categoria);
+		if(categoria!='S' && categoria!='C' && categoria!='D' && categoria!='E'){
+			cout << "ERROR, opción incorrecta." << endl;
+		}
+	}while(categoria!='S' && categoria!='C' && categoria!='D' && categoria!='E');
+	return categoria;
+}
+
+double obtenerPorcAumento(char categoria){
+	double porcentaje;
+	porcentaje = 0;
+	porcentaje = (categoria=='S')?20:porcentaje;
+	porcentaje = (categoria=='C')?10:porcentaje;
+	porcentaje = (categoria=='D')?5:porcentaje;
+	return porcentaje;	
+}
+
+
+
+
+
+
+
+
+
+
