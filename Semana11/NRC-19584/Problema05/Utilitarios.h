@@ -23,6 +23,37 @@ void procMostrarMenu(){
 }
 
 
+char leePaquete(){
+	char paquete;
+	cout << "Paquetes disponibles:" << endl;
+	cout << "  A.- PUNTA CANA" << endl;
+	cout << "  B.- SAN ANDRES" << endl;
+	cout << "  C.- cancun" << endl;
+	do{
+		cout << "Opción? "; cin >> paquete;
+		paquete = toupper(paquete);
+		if(paquete!='A' && paquete!='B' && paquete!='C'){
+			cout << "ERROR: opción incorrecta." << endl;
+		}
+	}while(paquete!='A' && paquete!='B' && paquete!='C');
+	return paquete;
+}
 
+
+double obtenerPrecio(char paquete){
+	double precio = 0.0;
+	precio = (paquete=='A')?780:precio;
+	precio = (paquete=='B')?1350:precio;
+	precio = (paquete=='C')?2550:precio;
+	return precio;
+}
+
+double obtenerPorcDcto(char paquete){
+	double porcDcto = 0.0;
+	porcDcto = (paquete=='A')?3.5:porcDcto;
+	porcDcto = (paquete=='B')?4.0:porcDcto;
+	porcDcto = (paquete=='C')?4.5:porcDcto;
+	return porcDcto;
+}
 
 
