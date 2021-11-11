@@ -99,3 +99,42 @@ string leeDatoString(string etiqueta)
 	return dato;
 }
 
+/*
+Nuevas funciones con CORONEL.
+*/
+
+int leeEntero(string etiqueta){
+	// Variables
+	int dato;
+	string strDato;
+	bool datoCorrecto = false; 
+	// Proceso
+	do{
+		cout << etiqueta; cin >> strDato;
+		if( isalpha(strDato[0]) ){
+			cout << "Error, ingrese un número." << endl;
+			continue;
+		}
+		dato = stoi( strDato );
+		datoCorrecto = true;
+	} while(!datoCorrecto);
+	// Reporte
+	return dato;
+}
+
+int leeEnteroPositivo(string etiqueta){
+	// Variables
+	int dato;
+	// Proceso
+	do{
+		dato = leeEntero(etiqueta);
+		if(dato<=0){
+			cout << "Error, ingrese un valor positivo." << endl;
+		}
+	} while(dato<=0);
+	// Reporte
+	return dato;
+}
+
+
+
