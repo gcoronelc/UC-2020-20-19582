@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
- * Lee un dato de tipo int
+ * Lee un dato de tipo int.
 */
 int leeDatoEntero()
 {
@@ -13,12 +13,20 @@ int leeDatoEntero()
 }
 
 /*
- * Lee un dato de tipo int
+ * Lee un dato de tipo int.
+ * Se le pasa como parámetro la etiqueta.
 */
 int leeDatoEntero(string etiqueta)
 {
 	int dato;
-	cout << etiqueta; cin >> dato;
+	string cadIngreso;
+	do{
+		cout << etiqueta; cin >> cadIngreso;
+		if (isalpha(cadIngreso[0])){
+			cout << "Error, debe ingresar un número." << endl;
+		}
+	}while(isalpha(cadIngreso[0]));
+	dato = atoi(cadIngreso.c_str());
 	return dato;
 }
 
@@ -27,9 +35,15 @@ int leeDatoEntero(string etiqueta)
 */
 int leeDatoEnteroPositivo(string etiqueta)
 {
-	int dato;
+	int dato = -1;
+	string cadIngreso;
 	do{
-		cout << etiqueta; cin>> dato;
+		cout << etiqueta; cin >> cadIngreso;
+		if (isalpha(cadIngreso[0])){
+			cout << "Error, debe ingresar un número." << endl;
+			continue;
+		}
+		dato = atoi(cadIngreso.c_str());
 		if( dato <= 0 ){
 			cout << "ERROR, valor incorrecto." << endl;
 		}
@@ -149,38 +163,31 @@ string leeDatoString(string etiqueta)
 Nuevas funciones con CORONEL.
 */
 
-int leeEntero(string etiqueta){
-	// Variables
-	int dato;
-	string strDato;
-	bool datoCorrecto = false; 
-	// Proceso
-	do{
-		cout << etiqueta; cin >> strDato;
-		if( isalpha(strDato[0]) ){
-			cout << "Error, ingrese un número." << endl;
-			continue;
-		}
-		dato = stoi( strDato );
-		datoCorrecto = true;
-	} while(!datoCorrecto);
-	// Reporte
-	return dato;
-}
 
-int leeEnteroPositivo(string etiqueta){
-	// Variables
-	int dato;
-	// Proceso
+// Leer opción de rango de opciones
+int leerOpcion(int opMin, int opMax){
+	int opcion;
 	do{
-		dato = leeEntero(etiqueta);
-		if(dato<=0){
-			cout << "Error, ingrese un valor positivo." << endl;
+		opcion = leeDatoEntero("Opción: ");
+		if(opcion < opMin || opcion > opMax){
+			cout << "Opcion incorrecta." << endl;
 		}
-	} while(dato<=0);
-	// Reporte
-	return dato;
+	} while(opcion < opMin || opcion > opMax);
+	return opcion;
 }
 
 
+
+// Leer opción de rango de opciones
+// Tiene un parametro para la etiqueta
+int leerOpcion(string etiqueta, int opMin, int opMax){
+	int opcion;
+	do{
+		opcion = leeDatoEntero(etiqueta);
+		if(opcion < opMin || opcion > opMax){
+			cout << "Opcion incorrecta." << endl;
+		}
+	} while(opcion < opMin || opcion > opMax);
+	return opcion;
+}
 
