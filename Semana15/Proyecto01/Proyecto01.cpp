@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ConvierteDatos.h"
+#include "LecturaDatos19582.h"
 using namespace std;
 
 int main(){
@@ -14,8 +14,7 @@ int main(){
 	// Lectura de datos
 	cout << "LECTURA DE DATOS" << endl;
 	cout << "==================================" << endl;
-	cout << "Precio: ";
-	precio = leedatofPositivos();
+	precio = leeDatoFloat("Precio: ");
 	
 	
 	// Proceso
