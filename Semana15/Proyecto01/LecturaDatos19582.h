@@ -66,6 +66,31 @@ float leeDatoFloat(string etiqueta)
 }
 
 /*
+ * Lee un dato de tipo float positivo.
+ * Tiene un parámetro para la etiqueta.
+*/
+float leeDatoFloatPositivo(string etiqueta)
+{
+	float dato;
+	string cadIngreso;
+	dato = -1;
+	do{
+		cout << etiqueta; cin >> cadIngreso;
+		if(isalpha(cadIngreso[0])){
+			cout << "Error, debe ingresar un número." << endl;
+			continue;
+		}
+		dato = atof(cadIngreso.c_str());	
+		if(dato<=0){
+			cout << "Error, debe ingresar un número positivo." << endl;
+		}
+	}while(dato<=0);
+	return dato;
+}
+
+
+
+/*
  * Lee un dato de tipo double
 */
 double leeDatoDouble()

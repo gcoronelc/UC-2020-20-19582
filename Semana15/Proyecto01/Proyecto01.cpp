@@ -14,7 +14,7 @@ int main(){
 	// Lectura de datos
 	cout << "LECTURA DE DATOS" << endl;
 	cout << "==================================" << endl;
-	precio = leeDatoFloat("Precio: ");
+	precio = leeDatoFloatPositivo("Precio: ");
 	
 	
 	// Proceso
