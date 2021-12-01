@@ -191,3 +191,16 @@ int leerOpcion(string etiqueta, int opMin, int opMax){
 	return opcion;
 }
 
+
+// Función para leer sexo
+char leeSexoMF( string etiqueta ){
+	char dato;
+	do{
+		cout << etiqueta; cin>> dato;
+		dato = toupper(dato);
+		if(dato!='M' && dato!='F'){
+			cout << "Error, ingrese M o F." << endl;
+		}
+	}while(dato!='M' && dato!='F');
+	return dato;
+}
